@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cytron Technology - About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8fcfd;
+      --surface: #ffffff;
+      --surface-alt: #eef9fb;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe7ea;
+      --primary: #06b6d4;
+      --primary-dark: #0891b2;
+      --shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      --max: 1180px;
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      background: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 84px 0;
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+    }
+
+    .about-viewport {
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #25a7df;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #25a7df;
+      text-transform: none;
+      font-weight: 400;
+    }
+
+    .section-copy {
+      margin: 0;
+      max-width: 760px;
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.86);
+      border-bottom: 1px solid rgba(219, 231, 234, 0.9);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: var(--primary-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 0.94rem;
+      color: #334155;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+      padding: 40px 0 56px;
+      background: #ffffff;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 28%, rgba(37, 167, 223, 0.22) 0 2px, transparent 3px),
+        radial-gradient(circle at 32% 52%, rgba(37, 167, 223, 0.18) 0 2px, transparent 3px),
+        radial-gradient(circle at 48% 22%, rgba(37, 167, 223, 0.18) 0 2px, transparent 3px),
+        radial-gradient(circle at 61% 46%, rgba(37, 167, 223, 0.2) 0 2px, transparent 3px),
+        radial-gradient(circle at 76% 26%, rgba(37, 167, 223, 0.16) 0 2px, transparent 3px),
+        radial-gradient(circle at 84% 58%, rgba(37, 167, 223, 0.2) 0 2px, transparent 3px),
+        linear-gradient(rgba(37, 167, 223, 0.08), rgba(37, 167, 223, 0.08)),
+        linear-gradient(rgba(37, 167, 223, 0.06), rgba(37, 167, 223, 0.06)),
+        linear-gradient(rgba(37, 167, 223, 0.05), rgba(37, 167, 223, 0.05)),
+        linear-gradient(rgba(37, 167, 223, 0.05), rgba(37, 167, 223, 0.05)),
+        radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92) 36%, rgba(245, 251, 255, 0.95) 100%);
+      background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        18% 1px,
+        22% 1px,
+        1px 24%,
+        1px 22%,
+        100% 100%;
+      background-position:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        18% 28%,
+        48% 22%,
+        61% 46%,
+        84% 58%,
+        0 0;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+      animation: networkFloat 14s ease-in-out infinite;
+    }
+
+    .hero::after {
+      inset: auto 8% 18% auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(37, 167, 223, 0.08), transparent 68%);
+      filter: blur(6px);
+      opacity: 0.65;
+      animation: floatBlobA 10s ease-in-out infinite;
+    }
+
+    .hero-inner {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .hero-kicker {
+      margin: 0;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #25a7df;
+      opacity: 0;
+      animation: heroIn 0.7s ease 0.1s forwards;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0 auto;
+      max-width: 1220px;
+      font-size: clamp(2rem, 6.2vw, 4.45rem);
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      opacity: 0;
+      animation: heroIn 0.85s cubic-bezier(.21,1.02,.32,1) 0.18s forwards;
+      text-align: center;
+      font-weight: 800;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      color: #25a7df;
+      text-transform: none;
+    }
+
+    .hero .accent {
+      display: block;
+      color: #25a7df;
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-top: 28px;
+      border-radius: 999px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      font-size: 2.15rem;
+      line-height: 1;
+      color: var(--primary);
+      animation: bounceCue 2.2s ease-in-out infinite;
+    }
+
+    .scroll-cue:hover {
+      transform: translateY(2px);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 14px 34px rgba(6, 182, 212, 0.28);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .intro-panel {
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(238, 249, 251, 0.9), rgba(255, 255, 255, 0.98));
+      border: 1px solid rgba(6, 182, 212, 0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-section {
+      background: linear-gradient(180deg, #eff8fd 0%, #edf7fc 100%);
+    }
+
+    .section-blue {
+      background: linear-gradient(180deg, #eff8fd 0%, #edf7fc 100%);
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    .about-content {
+      max-width: 1180px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .about-content .eyebrow {
+      margin-bottom: 14px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: #25a7df;
+    }
+
+    .about-content .section-title {
+      max-width: 620px;
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      text-transform: none;
+      color: #25a7df;
+      font-weight: 400;
+    }
+
+    .about-content .section-copy {
+      max-width: 1260px;
+      font-size: clamp(1.1rem, 2vw, 1.18rem);
+      line-height: 1.42;
+      color: #1f2a4a;
+      font-weight: 400;
+    }
+
+    .pillars,
+    .values-grid,
+    .stats-grid,
+    .footer-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .pillars {
+      margin-top: 34px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .build-section {
+      background: #ffffff;
+    }
+
+    .build-wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .build-eyebrow {
+      margin: 0 0 12px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #25a7df;
+    }
+
+    .build-title {
+      margin: 0 0 20px;
+      max-width: 1100px;
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      color: #1ba3da;
+      font-weight: 400;
+    }
+
+    .build-copy {
+      margin: 0;
+      max-width: 1160px;
+      font-size: clamp(1.05rem, 2vw, 1.08rem);
+      line-height: 1.45;
+      color: #1f2a4a;
+      font-weight: 400;
+    }
+
+    .build-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 44px;
+      margin-top: 54px;
+      align-items: start;
+    }
+
+    .build-pillar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .build-icon-box {
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: #eef5fd;
+      margin-bottom: 12px;
+    }
+
+    .build-icon-box svg {
+      width: 42px;
+      height: 42px;
+      stroke: #27a9e1;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .build-label {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #111111;
+    }
+
+    .card {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover,
+    .timeline-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 46px rgba(6, 182, 212, 0.14);
+      border-color: rgba(6, 182, 212, 0.22);
+    }
+
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      background: var(--surface-alt);
+      font-size: 1.6rem;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .story-copy {
+      max-width: 980px;
+      color: #1f2a4a;
+      line-height: 1.45;
+    }
+
+    .story-timeline {
+      --timeline-progress: 0%;
+      position: relative;
+      margin-top: 42px;
+      padding: 20px 0 10px;
+    }
+
+    .story-line {
+      position: absolute;
+      top: 140px;
+      bottom: 84px;
+      left: 50%;
+      width: 3px;
+      transform: translateX(-50%);
+      background: rgba(20, 32, 72, 0.65);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .story-line::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: var(--timeline-progress);
+      background: linear-gradient(180deg, #31b4ea 0%, #0f172a 100%);
+      transition: height 0.18s linear;
+    }
+
+    .story-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 110px 1fr;
+      gap: 22px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .story-side {
+      max-width: 280px;
+    }
+
+    .story-side.left {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .story-side.right {
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .story-year {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #25a7df;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .story-title {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      line-height: 1.1;
+      color: #25a7df;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .story-desc {
+      margin: 0;
+      color: #1f2a4a;
+      line-height: 1.35;
+      font-size: 1rem;
+    }
+
+    .story-node-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      z-index: 1;
+    }
+
+    .story-node {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f3fbfe;
+      border: 3px solid #1f2a4a;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+      position: relative;
+    }
+
+    .story-node::after {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: #0f172a;
+      transition: background 0.3s ease;
+    }
+
+    .story-item.active .story-node {
+      transform: scale(1.14);
+      border-color: #25a7df;
+      background: white;
+    }
+
+    .story-item.active .story-node::after {
+      background: #25a7df;
+    }
+
+    .story-photo {
+      width: 230px;
+      height: 150px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 8px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.2), transparent 45%),
+        linear-gradient(180deg, rgba(37,167,223,0.16), rgba(37,167,223,0.03)),
+        #d9edf6;
+      position: relative;
+    }
+
+    .story-photo::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(15, 23, 42, 0.75);
+      font-weight: 700;
+    }
+
+    .story-photo::after {
+      content: "";
+      position: absolute;
+      inset: 24px 18px 18px;
+      border-radius: 2px;
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.14)),
+        radial-gradient(circle at 20% 22%, #f2d3c6 0 8%, transparent 9%),
+        radial-gradient(circle at 38% 30%, #d39b7f 0 9%, transparent 10%),
+        radial-gradient(circle at 54% 28%, #9d5f3f 0 8%, transparent 9%),
+        radial-gradient(circle at 73% 26%, #e3c0ac 0 8%, transparent 9%),
+        linear-gradient(180deg, #7ca3b8 0 36%, #c5ddeb 36% 100%);
+      opacity: 0.92;
+    }
+
+    .story-photo.portrait {
+      width: 124px;
+      height: 164px;
+      transform: rotate(-8deg);
+      margin-left: 14px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.28), transparent 45%),
+        linear-gradient(180deg, rgba(37,167,223,0.12), rgba(37,167,223,0.03)),
+        #e8efe7;
+    }
+
+    .story-photo.portrait::after {
+      inset: 18px 16px 30px;
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0.16)),
+        radial-gradient(circle at 22% 24%, #8a3f2d 0 8%, transparent 9%),
+        radial-gradient(circle at 40% 30%, #f2d3b6 0 8%, transparent 9%),
+        radial-gradient(circle at 58% 28%, #9d5f3f 0 8%, transparent 9%),
+        radial-gradient(circle at 75% 24%, #d9b09a 0 8%, transparent 9%),
+        linear-gradient(180deg, #495f73 0 34%, #d2d9c8 34% 100%);
+    }
+
+    .story-item.reveal {
+      transform: translateY(24px) scale(0.99);
+    }
+
+    .stats-grid {
+      margin-top: 44px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .stat {
+      min-height: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      transition: transform 0.24s ease;
+    }
+
+    .stat-number {
+      font-size: clamp(2.3rem, 4vw, 3.3rem);
+      font-weight: 400;
+      line-height: 1;
+      color: #25a7df;
+    }
+
+    .stat-label {
+      margin-top: 8px;
+      color: #73869d;
+      font-weight: 400;
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+
+    .stat-support {
+      margin-top: 6px;
+      color: #8ea0b5;
+      font-weight: 400;
+      font-size: 0.82rem;
+      line-height: 1.4;
+      max-width: 180px;
+    }
+
+    .impact-section {
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+    }
+
+    .impact-wrap {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .impact-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      color: #25a7df;
+      font-weight: 400;
+    }
+
+    .impact-visual {
+      width: 132px;
+      height: 104px;
+      margin: 26px auto 24px;
+      display: grid;
+      place-items: center;
+      color: #111111;
+    }
+
+    .impact-visual svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .impact-copy {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: clamp(1.14rem, 2vw, 1.24rem);
+      line-height: 1.45;
+      color: #1f2a4a;
+      font-weight: 400;
+    }
+
+    .presence-section {
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+    }
+
+    .presence-layout {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 420px);
+      gap: 44px;
+      align-items: start;
+    }
+
+    .presence-copy {
+      max-width: 520px;
+    }
+
+    .presence-copy .eyebrow {
+      margin-bottom: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: #25a7df;
+    }
+
+    .presence-title {
+      margin: 0 0 16px;
+      max-width: 620px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      color: #25a7df;
+      font-weight: 400;
+    }
+
+    .presence-subcopy {
+      margin: 0;
+      max-width: 470px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #6b8098;
+      font-weight: 400;
+    }
+
+    .presence-shell {
+      position: relative;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .presence-cta-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 34px;
+    }
+
+    .presence-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      min-height: 56px;
+      padding: 0 26px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #28aae0 0%, #1698d2 100%);
+      color: white;
+      font-weight: 500;
+      box-shadow: inset 0 -3px 0 rgba(255,255,255,0.22), 0 8px 20px rgba(22, 152, 210, 0.2);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    }
+
+    .presence-button:hover {
+      transform: translateY(-2px);
+      box-shadow: inset 0 -3px 0 rgba(255,255,255,0.22), 0 14px 28px rgba(22, 152, 210, 0.28);
+      filter: brightness(1.03);
+    }
+
+    .map {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+      border-radius: 0;
+      border: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .map-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .map-ocean {
+      fill: url(#mapOcean);
+    }
+
+    .sea-glow {
+      fill: rgba(37, 167, 223, 0.08);
+    }
+
+    .map-grid {
+      stroke: rgba(104, 170, 201, 0.18);
+      stroke-width: 1;
+    }
+
+    .map-land {
+      fill: #d8edf7;
+      stroke: #a7d3e6;
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      transition: fill 0.35s ease;
+    }
+
+    .map-land:hover {
+      fill: #d2e9f4;
+    }
+
+    .map-focus {
+      fill: rgba(37, 167, 223, 0.1);
+      stroke: rgba(37, 167, 223, 0.22);
+      stroke-width: 1.2;
+    }
+
+    .map-caption {
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(37, 167, 223, 0.14);
+      color: #1f2a4a;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .map-caption::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #25a7df;
+      box-shadow: 0 0 0 6px rgba(37, 167, 223, 0.12);
+    }
+
+    .marker {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text);
+      opacity: 0;
+      animation: markerReveal 0.8s ease forwards;
+    }
+
+    .marker:nth-of-type(7) { animation-delay: 0.2s; }
+    .marker:nth-of-type(8) { animation-delay: 0.45s; }
+    .marker:nth-of-type(9) { animation-delay: 0.7s; }
+
+    .marker-dot {
+      width: 12px;
+      height: 12px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      background: var(--primary-dark);
+      box-shadow: 0 0 0 0 rgba(8, 145, 178, 0.45);
+      animation: pulse 2s infinite;
+    }
+
+    .marker-line {
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      width: 1.5px;
+      height: 22px;
+      background: linear-gradient(180deg, rgba(37, 167, 223, 0), rgba(37, 167, 223, 0.7));
+      transform: translateX(-50%);
+    }
+
+    .marker span {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(6, 182, 212, 0.18);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .values-grid {
+      margin-top: 48px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .value {
+      padding: 0;
+      text-align: center;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      transform: translateY(0);
+      animation: valueBounce 3.2s ease-in-out infinite;
+    }
+
+    .value-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 12px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #eff8fd, #e8f4fb);
+      color: #25a7df;
+    }
+
+    .value:nth-child(2) {
+      animation-delay: 0.25s;
+    }
+
+    .value:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    .value:nth-child(4) {
+      animation-delay: 0.75s;
+    }
+
+    .value:nth-child(5) {
+      animation-delay: 1s;
+    }
+
+    .value-icon svg {
+      width: 40px;
+      height: 40px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .values-section {
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: center;
+    }
+
+    .values-intro {
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .values-intro .eyebrow {
+      margin-bottom: 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: #25a7df;
+    }
+
+    .values-intro .section-copy {
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: clamp(1.08rem, 2vw, 1.18rem);
+      line-height: 1.5;
+      color: #1f2a4a;
+    }
+
+    .value-label {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #667b92;
+    }
+
+    .logo-row {
+      margin-top: 34px;
+      overflow: hidden;
+      border-radius: 24px;
+      position: relative;
+      background: linear-gradient(90deg, rgba(247, 250, 252, 1) 0%, rgba(247, 250, 252, 0) 12%, rgba(247, 250, 252, 0) 88%, rgba(247, 250, 252, 1) 100%);
+    }
+
+    .logo-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+
+    .logo-box {
+      min-width: 200px;
+      min-height: 88px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid var(--line);
+      color: #64748b;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      transition: transform 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+      color: var(--primary-dark);
+      border-color: rgba(6, 182, 212, 0.3);
+    }
+
+    .logo-row:hover .logo-track {
+      animation-play-state: paused;
+    }
+
+    .team-panel {
+      margin-top: 34px;
+      padding: 28px;
+      border-radius: 28px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .team-visual {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .team-slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      opacity: 0;
+      transform: translateX(42px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      pointer-events: none;
+    }
+
+    .team-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    .team-main,
+    .team-stack > div {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #c8f7ff, #effcff 45%, #9be7f5 100%);
+      border: 1px solid rgba(6, 182, 212, 0.14);
+    }
+
+    .team-main::before,
+    .team-stack > div::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.4), transparent 46%),
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3), transparent 32%);
+    }
+
+    .team-caption {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      right: 22px;
+      padding: 16px 18px;
+      background: rgba(15, 23, 42, 0.68);
+      color: white;
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .team-caption strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .team-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .team-main::after,
+    .team-stack > div::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -30% auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.28), transparent 68%);
+      animation: floatBlobA 10s ease-in-out infinite;
+    }
+
+    .team-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .team-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .team-arrow {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .team-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .team-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(100, 116, 139, 0.3);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .team-dot.active {
+      width: 26px;
+      background: var(--primary-dark);
+    }
+
+    .footer {
+      background: #0f172a;
+      color: white;
+      padding: 56px 0 36px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    }
+
+    .footer h3,
+    .footer h4 {
+      margin: 0 0 14px;
+    }
+
+    .footer p,
+    .footer li,
+    .footer a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px) scale(0.985);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+    .delay-4 { transition-delay: 0.32s; }
+
+    @keyframes heroIn {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceCue {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    @keyframes floatBlobA {
+      0%, 100% { transform: translate3d(0, 0, 0); }
+      50% { transform: translate3d(18px, 28px, 0); }
+    }
+
+    @keyframes floatBlobB {
+      0%, 100% { transform: translate3d(0, 0, 0); }
+      50% { transform: translate3d(-18px, -24px, 0); }
+    }
+
+    @keyframes networkFloat {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(0, -8px, 0) scale(1.015);
+      }
+    }
+
+    @keyframes markerReveal {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 9px)); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(8, 145, 178, 0.45); }
+      70% { box-shadow: 0 0 0 18px rgba(8, 145, 178, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(8, 145, 178, 0); }
+    }
+
+    @keyframes valueBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .pillars,
+      .stats-grid,
+      .values-grid,
+      .footer-grid,
+      .team-slide {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .build-pillars {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 28px;
+      }
+
+      .story-item {
+        grid-template-columns: 1fr 84px 1fr;
+        gap: 18px;
+      }
+
+      .story-photo {
+        width: 200px;
+        height: 132px;
+      }
+
+      .story-photo.portrait {
+        width: 118px;
+        height: 154px;
+      }
+
+      .presence-layout {
+        grid-template-columns: 1fr 340px;
+        gap: 28px;
+      }
+
+      .values-grid {
+        gap: 20px;
+      }
+
+      .footer-grid > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section {
+        min-height: calc(100vh - 68px);
+      }
+
+      .hero {
+        min-height: calc(100vh - 68px);
+      }
+
+      .about-viewport {
+        min-height: calc(100vh - 68px);
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .pillars,
+      .stats-grid,
+      .values-grid,
+      .footer-grid,
+      .team-slide {
+        grid-template-columns: 1fr;
+      }
+
+      .build-pillars {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        margin-top: 38px;
+      }
+
+      .presence-section {
+        min-height: auto;
+      }
+
+      .values-section {
+        min-height: auto;
+      }
+
+      .presence-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .presence-copy,
+      .presence-title,
+      .presence-subcopy {
+        max-width: none;
+      }
+
+      .presence-shell {
+        padding: 0;
+      }
+
+      .map {
+        aspect-ratio: 1.1 / 1;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 18px;
+      }
+
+      .story-copy {
+        max-width: none;
+      }
+
+      .story-timeline {
+        padding-left: 10px;
+      }
+
+      .story-line {
+        left: 13px;
+        top: 124px;
+        bottom: 62px;
+        transform: none;
+      }
+
+      .story-item {
+        grid-template-columns: 26px 1fr;
+        gap: 16px;
+        align-items: start;
+        margin-bottom: 32px;
+      }
+
+      .story-node-wrap {
+        min-height: 26px;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .story-side,
+      .story-side.left,
+      .story-side.right {
+        margin: 0;
+        max-width: none;
+        text-align: left;
+      }
+
+      .story-item > .story-side:first-child,
+      .story-item > .story-side:last-child {
+        grid-column: 2;
+      }
+
+      .story-item > .story-side:last-child {
+        margin-top: 10px;
+      }
+
+      .story-photo,
+      .story-photo.portrait {
+        width: 100%;
+        max-width: 270px;
+        height: 166px;
+        margin-left: 0;
+        transform: none;
+      }
+
+      .presence-shell,
+      .team-panel,
+      .intro-panel {
+        padding: 22px;
+      }
+
+      .map {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">CYTRON</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#build">How We Build</a>
+        <a href="#story">Story</a>
+        <a href="#presence">Presence</a>
+        <a href="#values">Values</a>
+        <a href="#team">Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <p class="hero-kicker">About Cytron Technology</p>
+          <h1>
+            Simplifying Smart Technology
+            <span class="accent">For Education and Industry</span>
+          </h1>
+          <div>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to About section">↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-viewport about-section">
+      <div class="container">
+        <div class="about-content reveal">
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">Practical Electronics, Built with Purpose</h2>
+          <p class="section-copy">
+            Cytron Technology Sdn. Bhd is a technology company dedicated to developing innovative solutions for industrial and automation applications to makers, educators, and professionals. We create technology that is accessible and impactful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="build" class="section build-section section-white">
+      <div class="container">
+        <div class="build-wrap reveal">
+          <p class="build-eyebrow">How We Build</p>
+          <h2 class="build-title">From The Ground Up By Engineers, For Engineers.</h2>
+          <p class="build-copy">
+            With an in-house design and engineering team, we develop our own products from the ground up covering design, manufacturing, and community. Guided by real user needs, we build solutions from a user's perspective to ensure practicality, reliability, and ease of use.
+          </p>
+
+          <div class="build-pillars">
+            <div class="build-pillar reveal delay-1">
+              <div class="build-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="8" y="7" width="24" height="18" rx="2"></rect>
+                  <path d="M16 31h8"></path>
+                  <path d="M12 37h16"></path>
+                  <path d="M20 25v12"></path>
+                  <path d="M13 13h8"></path>
+                  <path d="M13 18h5"></path>
+                  <path d="M28 10l10 10"></path>
+                  <path d="M31 20l7-7"></path>
+                  <path d="M25 23l13-13"></path>
+                </svg>
+              </div>
+              <p class="build-label">Design</p>
+            </div>
+
+            <div class="build-pillar reveal delay-2">
+              <div class="build-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M7 33h34"></path>
+                  <path d="M11 33v-9"></path>
+                  <path d="M17 33v-13"></path>
+                  <path d="M23 33v-17"></path>
+                  <path d="M29 33v-13"></path>
+                  <path d="M35 33v-9"></path>
+                  <path d="M8 37h32"></path>
+                  <circle cx="30" cy="14" r="4"></circle>
+                  <path d="M30 6v4"></path>
+                  <path d="M24 14h2"></path>
+                  <path d="M34 14h2"></path>
+                </svg>
+              </div>
+              <p class="build-label">Manufacturing</p>
+            </div>
+
+            <div class="build-pillar reveal delay-3">
+              <div class="build-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M9 28c2 0 4 2 5 4l2 4c1 2 2 3 4 3h8c2 0 3-1 4-3l2-4c1-2 3-4 5-4"></path>
+                  <path d="M15 28v-3c0-5 4-9 9-9s9 4 9 9v3"></path>
+                  <circle cx="19" cy="24" r="2"></circle>
+                  <circle cx="24" cy="22" r="2"></circle>
+                  <circle cx="29" cy="24" r="2"></circle>
+                  <path d="M24 10v-3"></path>
+                  <path d="M19 13l-2-2"></path>
+                  <path d="M29 13l2-2"></path>
+                </svg>
+              </div>
+              <p class="build-label">Community</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section section-blue">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2 class="section-title">Two Decades of Building, One Step at a Time</h2>
+          <p class="section-copy story-copy">
+            What started in Malaysia in 2005 as a group of students passionate about technology and robotics has grown into a team of 50+ dedicated individuals who continue to drive innovation forward.
+          </p>
+        </div>
+
+        <div class="story-timeline" id="story-timeline">
+          <div class="story-line" aria-hidden="true"></div>
+
+          <article class="story-item reveal delay-1" data-timeline-step>
+            <div class="story-side left">
+              <p class="story-year">2005</p>
+              <h3 class="story-title">A Spark In Malaysia</h3>
+              <p class="story-desc">Founded by students passionate about technology and robotics.</p>
+            </div>
+            <div class="story-node-wrap">
+              <div class="story-node" aria-hidden="true"></div>
+            </div>
+            <div class="story-side right">
+              <div class="story-photo portrait" data-label="Founding Years"></div>
+            </div>
+          </article>
+
+          <article class="story-item reveal delay-2" data-timeline-step>
+            <div class="story-side left">
+              <div class="story-photo" data-label="Maker Community"></div>
+            </div>
+            <div class="story-node-wrap">
+              <div class="story-node" aria-hidden="true"></div>
+            </div>
+            <div class="story-side right">
+              <p class="story-year">2017</p>
+              <h3 class="story-title">Empowering Makers</h3>
+              <p class="story-desc">Built a trusted community of hobbyists, educators, and engineers.</p>
+            </div>
+          </article>
+
+          <article class="story-item reveal delay-3" data-timeline-step>
+            <div class="story-side left">
+              <p class="story-year">Today</p>
+              <h3 class="story-title">Today</h3>
+              <p class="story-desc">A team of 50+ dedicated professionals driving innovation across Southeast Asia and beyond.</p>
+            </div>
+            <div class="story-node-wrap">
+              <div class="story-node" aria-hidden="true"></div>
+            </div>
+            <div class="story-side right">
+              <div class="story-photo" data-label="Cytron Today"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section section-white impact-section">
+      <div class="container">
+        <div class="impact-wrap reveal">
+          <p class="eyebrow">Our Impact</p>
+          <h2 class="impact-title">Trusted Across Education, Automation, and Applied Engineering</h2>
+          <div class="impact-visual" aria-hidden="true">
+            <svg viewBox="0 0 96 76">
+              <rect x="14" y="10" width="54" height="54" rx="8"></rect>
+              <circle cx="57" cy="25" r="6"></circle>
+              <path d="M22 53l15-16 12 13 8-8 11 11"></path>
+            </svg>
+          </div>
+          <p class="impact-copy">
+            Today, our solutions are trusted across industrial, automation, and educational environments.
+          </p>
+
+          <div class="stats-grid">
+          <div class="stat reveal delay-1">
+            <div class="stat-number" data-target="100" data-suffix="+">0</div>
+            <div class="stat-label">Hardware Designs</div>
+          </div>
+          <div class="stat reveal delay-2">
+            <div class="stat-number" data-target="20" data-suffix="+">0</div>
+            <div class="stat-label">Industry Use Cases</div>
+          </div>
+          <div class="stat reveal delay-3">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat reveal delay-4">
+            <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+            <div class="stat-label">Units Deployed</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="presence" class="section section-blue presence-section">
+      <div class="container">
+        <div class="presence-layout reveal">
+          <div class="presence-copy">
+            <p class="eyebrow">Global Presence</p>
+            <h2 class="presence-title">
+              We have expanded beyond Malaysia into Thailand, Singapore, and Vietnam, and continue to grow our presence in the region.
+            </h2>
+            <p class="presence-subcopy">
+              In addition, our products are distributed globally through an active network of distributors, making our solutions accessible to users worldwide.
+            </p>
+          </div>
+
+          <div class="presence-shell">
+            <div class="map">
+              <div class="map-caption">Southeast Asia Presence</div>
+              <svg class="map-svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <linearGradient id="mapOcean" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#f8fcff"></stop>
+                  <stop offset="100%" stop-color="#edf7fb"></stop>
+                </linearGradient>
+              </defs>
+
+              <rect class="map-ocean" x="0" y="0" width="1200" height="620"></rect>
+              <ellipse class="sea-glow" cx="735" cy="300" rx="340" ry="210"></ellipse>
+
+              <g class="map-grid">
+                <line x1="120" y1="0" x2="120" y2="620"></line>
+                <line x1="240" y1="0" x2="240" y2="620"></line>
+                <line x1="360" y1="0" x2="360" y2="620"></line>
+                <line x1="480" y1="0" x2="480" y2="620"></line>
+                <line x1="600" y1="0" x2="600" y2="620"></line>
+                <line x1="720" y1="0" x2="720" y2="620"></line>
+                <line x1="840" y1="0" x2="840" y2="620"></line>
+                <line x1="960" y1="0" x2="960" y2="620"></line>
+                <line x1="1080" y1="0" x2="1080" y2="620"></line>
+                <line x1="0" y1="103" x2="1200" y2="103"></line>
+                <line x1="0" y1="206" x2="1200" y2="206"></line>
+                <line x1="0" y1="309" x2="1200" y2="309"></line>
+                <line x1="0" y1="412" x2="1200" y2="412"></line>
+                <line x1="0" y1="515" x2="1200" y2="515"></line>
+              </g>
+
+              <g>
+                <path class="map-land" d="M363 112l44 3 41 18 22 23 18 42-1 37-30 18-18 27-24 14-39 4-12 16-30 4-22-19-1-25 17-20 8-26 12-30-8-33 7-28 16-25z"></path>
+                <path class="map-land" d="M531 132l49 8 37 24 11 33-18 29-7 36-21 33-34 24-29 8-14 24-29 16-11 24 8 15 25 5 11 12-8 17-32 9-27-14-9-28 18-36 12-40-9-26 11-29 22-21 8-29 18-31 18-25z"></path>
+                <path class="map-land" d="M603 341l24 0 16 8 7 14-8 16-20 8-18-11-7-17z"></path>
+                <path class="map-land" d="M630 372l26 2 18 14 5 23-11 18-24 9-22-8-10-22 7-20z"></path>
+                <path class="map-land" d="M714 168l20-9 26 7 6 16-13 12-24-1-16-12z"></path>
+                <path class="map-land" d="M747 191l22-9 31 5 14 17-8 15-28 10-22-7-10-15z"></path>
+                <path class="map-land" d="M705 213l22-3 16 11 4 18-14 17-22 6-19-13-1-18z"></path>
+                <path class="map-land" d="M770 233l31-5 29 14 5 17-15 13-31 6-22-8-9-20z"></path>
+                <path class="map-land" d="M780 281l37-5 31 16 3 21-24 18-37 9-23-17-4-23z"></path>
+                <path class="map-land" d="M735 321l42-4 24 17 2 24-21 18-36 7-23-14-5-23z"></path>
+                <path class="map-land" d="M694 390l54 8 37 26 24 34-16 29-42 8-31-18-16-31-16-17-17-8-7-16z"></path>
+                <path class="map-land" d="M673 431l28 9 14 17-8 18-29 12-24-6-6-21 8-20z"></path>
+                <path class="map-land" d="M779 413l32 8 22 20-8 24-30 5-23-15-4-23z"></path>
+                <path class="map-land" d="M847 348l40 9 23 25-5 22-25 8-30-9-14-26z"></path>
+                <path class="map-land" d="M883 316l45 13 30 26 6 28-20 15-34-8-18-27-14-13 2-21z"></path>
+                <path class="map-land" d="M905 415l27 7 18 16-6 19-21 4-17-10-7-17z"></path>
+                <path class="map-land" d="M954 432l22 4 15 11-4 13-19 2-12-8-5-12z"></path>
+                <path class="map-land" d="M986 446l19 5 14 12-5 12-18 1-13-8-3-13z"></path>
+              </g>
+
+              <ellipse class="map-focus" cx="732" cy="311" rx="260" ry="205"></ellipse>
+            </svg>
+
+              <div class="marker" data-lat="16.462798074643892" data-lon="108.3436232603094">
+                <div class="marker-line"></div>
+                <div class="marker-dot"></div>
+                <span>Vietnam</span>
+              </div>
+              <div class="marker" data-lat="14.129322383009802" data-lon="100.56455351133047">
+                <div class="marker-line"></div>
+                <div class="marker-dot"></div>
+                <span>Thailand</span>
+              </div>
+              <div class="marker" data-lat="5.783455433742135" data-lon="100.56455351133047">
+                <div class="marker-line"></div>
+                <div class="marker-dot"></div>
+                <span>Malaysia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presence-cta-wrap reveal">
+          <a class="presence-button" href="#partners">Our Distributors</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="values" class="section section-white values-section">
+      <div class="container">
+        <div class="values-intro reveal">
+          <p class="eyebrow">Our Values</p>
+          <h2 class="section-title">Our Culture Is Rooted In Five Core Values</h2>
+          <p class="section-copy">
+            The working culture centers on responsibility, collaboration, customer understanding, curiosity, and the ability to adapt in a fast-changing technology landscape.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value reveal delay-1">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M9 29h10l7 6h11a4 4 0 0 0 0-8h-9"></path>
+                <path d="M20 24l5-5a5 5 0 0 1 7 0l5 5"></path>
+                <path d="M12 20a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"></path>
+                <path d="M5 35V23h6"></path>
+                <path d="M17 12h16"></path>
+              </svg>
+            </div>
+            <p class="value-label">Ownership</p>
+          </div>
+          <div class="value reveal delay-2">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M12 16l6-5 6 5"></path>
+                <path d="M24 16l6-5 6 5"></path>
+                <path d="M14 28l6 6 4-4 4 4 6-6"></path>
+                <path d="M10 20l7 8"></path>
+                <path d="M38 20l-7 8"></path>
+                <path d="M18 16l6 7 6-7"></path>
+              </svg>
+            </div>
+            <p class="value-label">Teamwork</p>
+          </div>
+          <div class="value reveal delay-3">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="8"></circle>
+                <path d="M24 8v5"></path>
+                <path d="M24 35v5"></path>
+                <path d="M8 24h5"></path>
+                <path d="M35 24h5"></path>
+                <path d="M13 13l4 4"></path>
+                <path d="M31 31l4 4"></path>
+                <path d="M13 35l4-4"></path>
+                <path d="M31 17l4-4"></path>
+                <path d="M17 24c2-3 4-4 7-4 3 0 5 1 7 4"></path>
+              </svg>
+            </div>
+            <p class="value-label">Customer-Centric</p>
+          </div>
+          <div class="value reveal delay-4">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M15 30h18l4 6H11z"></path>
+                <path d="M18 30v-6a6 6 0 0 1 12 0v6"></path>
+                <path d="M18 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                <path d="M31 12l2 2 3-1 1 3 3 1-1 3 2 2-2 2 1 3-3 1-1 3-3-1-2 2"></path>
+              </svg>
+            </div>
+            <p class="value-label">Learn</p>
+          </div>
+          <div class="value reveal delay-4">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M38 17a16 16 0 1 0 2 16"></path>
+                <path d="M38 10v10H28"></path>
+                <path d="M17 24a7 7 0 0 1 11-5"></path>
+                <path d="M31 24a7 7 0 0 1-11 5"></path>
+                <path d="M19 29l-1 5 5-1"></path>
+              </svg>
+            </div>
+            <p class="value-label">Change</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-blue">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Trusted By Industry Partners</p>
+          <h2 class="section-title">Built to Work Alongside Reliable Technology Ecosystems</h2>
+          <p class="section-copy">
+            This standalone version keeps the partner area generic, so real partner logos or names can be dropped in later without changing the layout.
+          </p>
+        </div>
+
+        <div class="logo-row reveal">
+          <div class="logo-track">
+            <div class="logo-box">PARTNER 01</div>
+            <div class="logo-box">PARTNER 02</div>
+            <div class="logo-box">PARTNER 03</div>
+            <div class="logo-box">PARTNER 04</div>
+            <div class="logo-box">PARTNER 05</div>
+            <div class="logo-box">PARTNER 06</div>
+            <div class="logo-box">PARTNER 07</div>
+            <div class="logo-box">PARTNER 08</div>
+            <div class="logo-box">PARTNER 01</div>
+            <div class="logo-box">PARTNER 02</div>
+            <div class="logo-box">PARTNER 03</div>
+            <div class="logo-box">PARTNER 04</div>
+            <div class="logo-box">PARTNER 05</div>
+            <div class="logo-box">PARTNER 06</div>
+            <div class="logo-box">PARTNER 07</div>
+            <div class="logo-box">PARTNER 08</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section section-white">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Behind Every Solution</p>
+          <h2 class="section-title">There’s a Team Behind the Technology</h2>
+          <p class="section-copy">
+            From concept to execution, Cytron’s work is driven by people who care about making technology more practical, reliable, and accessible.
+          </p>
+        </div>
+
+        <div class="team-panel reveal">
+          <div class="team-visual">
+            <div class="team-slide active">
+              <div class="team-main">
+                <div class="team-caption">
+                  <strong>Engineering, Product, and Community</strong>
+                  A cross-functional team helps turn ideas into hardware, tools, documentation, and real-world outcomes.
+                </div>
+              </div>
+              <div class="team-stack">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="team-slide">
+              <div class="team-main" style="background: linear-gradient(135deg, #d7faff, #e5fff6 45%, #8be4ff 100%);">
+                <div class="team-caption">
+                  <strong>From Idea to Execution</strong>
+                  Teams across design, manufacturing, and support keep the work practical and production-ready.
+                </div>
+              </div>
+              <div class="team-stack">
+                <div style="background: linear-gradient(135deg, #cdf4ff, #ffffff 42%, #b2f0ff 100%);"></div>
+                <div style="background: linear-gradient(135deg, #baf4ff, #ebfffc 45%, #a2e7ff 100%);"></div>
+              </div>
+            </div>
+            <div class="team-slide">
+              <div class="team-main" style="background: linear-gradient(135deg, #bfefff, #f6ffff 45%, #8fdcf7 100%);">
+                <div class="team-caption">
+                  <strong>People Behind Every Solution</strong>
+                  The products are only one part of the story. The real strength is the team that makes technology easier to adopt.
+                </div>
+              </div>
+              <div class="team-stack">
+                <div style="background: linear-gradient(135deg, #d9fbff, #ffffff 44%, #b9edff 100%);"></div>
+                <div style="background: linear-gradient(135deg, #b7edff, #eafcff 45%, #97dcff 100%);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="team-controls">
+            <button class="team-arrow" type="button" data-team-nav="prev" aria-label="Previous slide">←</button>
+            <div class="team-dots">
+              <button class="team-dot active" type="button" data-team-dot="0" aria-label="Team slide 1"></button>
+              <button class="team-dot" type="button" data-team-dot="1" aria-label="Team slide 2"></button>
+              <button class="team-dot" type="button" data-team-dot="2" aria-label="Team slide 3"></button>
+            </div>
+            <button class="team-arrow" type="button" data-team-nav="next" aria-label="Next slide">→</button>
+          </div>
+          <div class="team-cta">
+            <a class="presence-button" href="#team">Meet Our Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>CYTRON</h3>
+          <p>Simplifying smart technology for education, engineering, and industry.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Focus</h4>
+          <ul>
+            <li><a href="#build">Design</a></li>
+            <li><a href="#build">Manufacturing</a></li>
+            <li><a href="#presence">Regional Presence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Values</h4>
+          <ul>
+            <li><a href="#values">Ownership</a></li>
+            <li><a href="#values">Teamwork</a></li>
+            <li><a href="#values">Change</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Cytron Technology. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+    const counters = document.querySelectorAll(".stat-number");
+    const teamSlides = Array.from(document.querySelectorAll(".team-slide"));
+    const teamDots = Array.from(document.querySelectorAll(".team-dot"));
+    const teamPrev = document.querySelector('[data-team-nav="prev"]');
+    const teamNext = document.querySelector('[data-team-nav="next"]');
+    const storyTimeline = document.getElementById("story-timeline");
+    const timelineSteps = Array.from(document.querySelectorAll("[data-timeline-step]"));
+    const seaMap = document.querySelector(".map");
+    const seaMarkers = Array.from(document.querySelectorAll(".map .marker[data-lat][data-lon]"));
+    let teamIndex = 0;
+    let teamTimer;
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const target = Number(el.getAttribute("data-target") || "0");
+        const suffix = el.getAttribute("data-suffix") || "";
+        const duration = 1400;
+        const start = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const value = Math.floor(progress * target);
+          el.textContent = `${value.toLocaleString()}${suffix}`;
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = `${target.toLocaleString()}${suffix}`;
+          }
+        }
+
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.45 });
+
+    counters.forEach((counter) => counterObserver.observe(counter));
+
+    function updateStoryTimeline() {
+      if (!storyTimeline || !timelineSteps.length) return;
+
+      const rect = storyTimeline.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const start = viewportHeight * 0.82;
+      const end = viewportHeight * 0.22;
+      const total = rect.height + start - end;
+      const current = Math.min(Math.max(start - rect.top, 0), total);
+      const progress = Math.max(0, Math.min(current / total, 1));
+
+      storyTimeline.style.setProperty("--timeline-progress", `${progress * 100}%`);
+
+      timelineSteps.forEach((step) => {
+        const stepRect = step.getBoundingClientRect();
+        const stepCenter = stepRect.top + stepRect.height / 2;
+        const active = stepCenter < viewportHeight * 0.72;
+        step.classList.toggle("active", active);
+      });
+    }
+
+    function updateSeaMapMarkers() {
+      if (!seaMap || !seaMarkers.length) return;
+
+      const bounds = {
+        minLat: 0,
+        maxLat: 24,
+        minLon: 92,
+        maxLon: 121
+      };
+
+      seaMarkers.forEach((marker) => {
+        const lat = Number(marker.getAttribute("data-lat"));
+        const lon = Number(marker.getAttribute("data-lon"));
+        const x = ((lon - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * 100;
+        const y = ((bounds.maxLat - lat) / (bounds.maxLat - bounds.minLat)) * 100;
+        marker.style.left = `${x}%`;
+        marker.style.top = `${y}%`;
+      });
+    }
+
+    function setTeamSlide(index) {
+      teamIndex = (index + teamSlides.length) % teamSlides.length;
+      teamSlides.forEach((slide, idx) => {
+        slide.classList.toggle("active", idx === teamIndex);
+      });
+      teamDots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === teamIndex);
+      });
+    }
+
+    function startTeamAutoplay() {
+      clearInterval(teamTimer);
+      teamTimer = setInterval(() => {
+        setTeamSlide(teamIndex + 1);
+      }, 4200);
+    }
+
+    if (teamSlides.length) {
+      teamPrev?.addEventListener("click", () => {
+        setTeamSlide(teamIndex - 1);
+        startTeamAutoplay();
+      });
+
+      teamNext?.addEventListener("click", () => {
+        setTeamSlide(teamIndex + 1);
+        startTeamAutoplay();
+      });
+
+      teamDots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          setTeamSlide(idx);
+          startTeamAutoplay();
+        });
+      });
+
+      document.querySelector(".team-panel")?.addEventListener("mouseenter", () => clearInterval(teamTimer));
+      document.querySelector(".team-panel")?.addEventListener("mouseleave", startTeamAutoplay);
+
+      setTeamSlide(0);
+      startTeamAutoplay();
+    }
+
+    updateSeaMapMarkers();
+    updateStoryTimeline();
+    window.addEventListener("scroll", updateStoryTimeline, { passive: true });
+    window.addEventListener("resize", updateSeaMapMarkers);
+    window.addEventListener("resize", updateStoryTimeline);
+  </script>
+</body>
+</html>
